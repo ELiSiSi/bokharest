@@ -2,7 +2,7 @@ let buttons = document.querySelectorAll('.menu .box button');
 let boxes = document.querySelectorAll('.menu .box');
 
 let lastActiveIndex = -1; // علشان نعرف الزر اللي اتضغط آخر مرة
- 
+let scroll = 0;
 buttons.forEach(function (button , index) {
   button.onclick = function () {
     if (lastActiveIndex === index) {

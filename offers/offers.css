@@ -1,10 +1,12 @@
 :root {
-   --main-color: #d70000;
+   --main-color: #C6F400;
   --secondary-color: #000000;
+}
 
 html {
   scroll-behavior: smooth;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,84 +16,81 @@ html {
 body {
   background-color: var(--main-color);
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 
- @media (max-width: 300px) {
-  .container {
-    width: 360px;
-  }
-}
-
-/* small  */
-
+/* Small screens */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-/* medium*/
-
+/* Medium screens */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-/* large */
-
+/* Large screens */
 @media (min-width: 1200px) {
   .container {
     width: 1100px;
   }
 }
 
-/* start header */
-/* start header */
-/* start header */
+/* Header Section */
 .header {
   background-color: #ffffff;
+  font-weight: 900;
+  padding: 10px 0;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-
   align-items: center;
 }
 
 .header img {
   width: 110px;
-  margin: 0px;
-  padding: 0px;
-
-  animation-name: thebest;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  
+  margin: 0;
+  padding: 0;
+  animation: thebest 2s infinite;
 }
 
 @keyframes thebest {
   0% {
-    translate: 0 0;
+    transform: translateX(0);
   }
   50% {
-    translate: 20px 0;
+    transform: translateX(20px);
   }
-
   100% {
-    translate: 0 0;
+    transform: translateX(0);
+  }
+}
+
+/* Animation preference for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .header img {
+    animation: none;
   }
 }
 
 .header .container .name {
   color: #ff0000;
+  font-size: 18px;
 }
 
 .header .container .name span {
@@ -101,10 +100,8 @@ body {
 @media (max-width: 768px) {
   .header {
     background-color: #fff;
-    height: 50px;
-    padding-bottom: 20px;
-    padding-top: -200px;
-    margin-top: 0px;
+    height: auto;
+    padding: 10px 0;
   }
 
   .header img {
@@ -117,104 +114,105 @@ body {
   }
 }
 
-    /* The offer */
-   /* The offer */
-  /* The offer */
-
-  .title{
-    margin-top: 20px;
-    margin-bottom: -25px;
-    text-align: center;
-  }
-  .title .text{
-
-    font-size: 50px;
-  }
-
-    .title .text:hover{
-color: #ffe100;
-    font-size: 55px;
-  }
-
-  /* start offer */
- /* staer offer */
-/* start offer */
-
-.offer .container{
- margin-top: 50px;
- width: 80%;
- 
-padding-bottom: 10px;
-
+/* Title Section */
+.title {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-.offer .row{
+.title .text {
+  font-size: 50px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.title .text:hover {
+  color: #ffe100;
+  font-size: 55px;
+}
+
+@media (max-width: 768px) {
+  .title .text {
+    font-size: 30px;
+  }
   
-    direction: rtl;
- 
- color: #ffffff;
- font-size: 22px;
+  .title .text:hover {
+    font-size: 35px;
+  }
+}
+
+/* Offer Section */
+.offer .container {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 500px) {
+  .offer .container {
+    width: 99%;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.offer .container img {
+  margin: auto;
+  width: 100%;
+  border: #000 solid 5px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.offer .container img:hover {
+  transform: scale(1.02);
+}
+
+/* Click Section */
+.click .containerClick {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+  padding-bottom: 50px;
+    text-align: center;
 
 }
-.offer .row span{
-
-   color:  var(--secondary-color);
-   font-size: 28px;
+.click .containerClick form {
+  margin-bottom: 30px;
+  text-align: center;
 }
- 
- .offer .row .ffer{
 
-font-size: 28px;
-color: #d5ff19;
-
- }
- 
- .offer .container  fieldset:hover{
-
-   border: var(--secondary-color) 5px solid;
- 
+.containerClick form .text {
+  font-size: 40px;
+  color: var(--secondary-color);
+  line-height: 2;
 }
- 
-
-   /* start  click */
-  /* start  click */
- /* start  click */
 
 
- 
-  .click .container form {
- 
- margin-bottom: 30px;
- 
- 
-text-align: center;
+.containerClick form a {
+  font-size: 40px;
+  background-color: rgba(120, 56, 56, 0.447);
+  color: #000;
+  border: 2px solid black;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
 
- }
+.containerClick form a:hover {
+  color: var(--secondary-color);
+  font-size: 45px;
+  background-color: rgba(120, 56, 56, 0.7);
+  transform: translateY(-2px);
+}
 
-  .container form .text{
-
-font-size: 40px;
-color: var(--secondary-color);
-line-height: 2;
-
- }
-
-  .container form  a{
-
-font-size: 40px;
-background-color: rgba(120, 56, 56, 0.447);
-color: #000;
-
-border: 2px solid black;
-padding: 5px;
- 
- 
-
- }
- 
-  .container form a:hover{
-color: var(--secondary-color);
-font-size: 45px;
- 
-
- }

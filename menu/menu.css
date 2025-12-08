@@ -1,5 +1,5 @@
 :root {
-  --main-color: #8b0000; /* أحمر غامق */
+  --main-color: #9cbd07  ;
   --secondary-color: #000000; /* أسود */
   --light-color: #fff;
   --hover-color: #ffd700; /* ذهبي */
@@ -70,7 +70,7 @@ body {
 .header .name {
   font-size: 24px;
   font-weight: bold;
-  color: #ff0000;
+  color: #000000;
 }
 
 .header .name span {
