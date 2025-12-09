@@ -133,6 +133,7 @@ body {
 .profile .text span {
   font-size: 23px;
   font-weight: 800;
+  direction: rtl;
 }
 
 .profile .icon {
