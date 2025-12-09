@@ -101,16 +101,19 @@ body {
   .header {
      height: 50px;
     padding-bottom: 20px;
-    padding-top: -200px;
-    margin-top: 0px;
+     margin-top: -0px;
   }
 
   .header img {
+         margin-top: -20px;
+
     width: 30px;
   }
 
   .header .container .name {
-    font-size: 14px;
+         margin-top: -20px;
+
+    font-size: 13px;
    }
 }
 
