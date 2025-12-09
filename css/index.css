@@ -105,8 +105,8 @@ body {
   text-align: center;
   color: #ffffff;
   padding-top: 20px;
-  padding-bottom: 20px;
-}
+  margin-bottom: -60px;
+ }
 
 .profile .image img {
   width: 200px;
