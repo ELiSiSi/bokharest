@@ -79,17 +79,19 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    padding: 5px 0;
+     height: 50px;
+    padding-bottom: 20px;
+    padding-top: -200px;
+    margin-top: 0px;
   }
 
   .header img {
-    width: 40px;
+    width: 30px;
   }
 
-  .header .name {
+  .header .container .name {
     font-size: 14px;
-    color: var(--main-color);
-  }
+   }
 }
 
 /* Title */
